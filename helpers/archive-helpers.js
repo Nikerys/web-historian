@@ -97,6 +97,10 @@ exports.addUrlToList = function(url, callback) {
 };
 
 exports.isUrlArchived = function(url, callback) {
+  //1)Input: url and callback; Output: passes a boolean to the callback and
+  //  the result of the callback will be an output; No side effects
+  //2) 
+
 };
 
 exports.downloadUrls = function(urls) {
