@@ -25,23 +25,31 @@ exports.initialize = function(pathsObj) {
 // The following function names are provided to you to suggest how you might
 // modularize your code. Keep it clean!
 
-exports.readListOfUrls = function(done) {
-  //1) Input: callback aka done; Output: array of strings; No side effects
-  //2)This function will read the text file and output array of strings
-  //3)This function will read the text file and output array of strings 
+exports.readListOfUrls = function(callback) {
+  //1) Input: callback; Output: callback function result; No side effects
+  //2)This function will read the text file and output callback function result
+  //3)This function will read the text file and output callback function result which in our  case is an array of strings 
   //  Where every item of array is a line in the text file, and every line
   //  consist of one URL
   //4)Diagram
-  //5)Utilize fs library's Read file command that takes 'sites.txt' as its 
-  //  first argument, 'utf8' as its second argument and callback as a third
-  //  argument. 
+  //5)Utilize fs library's Read file command that takes 'sites.txt' which is stored inside the variable object paths as its 
+  //  first argument, 'utf8' as its second argument and callback as a third argument. 
   //    Inside the callback function if it encounter error 
-  //      Let User know about it through console.log and run done on error
+  //      Let User know about it through console.log
   //    Otherwise, let user know that file was successfuly read
-  //    return an array that contains the content split by '\n' newline
-  //    run done on error and array
+  //      return an array that contains the content split by '\n' newline
+  //      run callback on array
   //6)Verified on the board
-
+  fs.readFile(this.paths.list, 'utf8', function (err, content) {
+    //console.log('Example from callbackReview.js');
+    if (err) {
+      console.log('fs.readFile failed :(\n', err);
+    } else {
+      console.log('fs.readFile successfully completed:)\n', content);
+      var arr = content.split('\n');
+      callback(arr);
+    }
+  });
 };
 
 exports.isUrlInList = function(url, callback) {
