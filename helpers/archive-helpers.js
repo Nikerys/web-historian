@@ -60,6 +60,7 @@ exports.isUrlInList = function(url, callback) {
   //3) This function will accept url and callback, utilize readListOfUrls helper function
   //   check if url in the list, return true if it is and false if it isn't.
   //   It will then run callback on that result
+  //4) Diagram
 };
 
 exports.addUrlToList = function(url, callback) {
