@@ -99,7 +99,11 @@ exports.addUrlToList = function(url, callback) {
 exports.isUrlArchived = function(url, callback) {
   //1)Input: url and callback; Output: passes a boolean to the callback and
   //  the result of the callback will be an output; No side effects
-  //2) 
+  //2)This function will check our archive directory and see if the 
+  //  file that was asked is in there.
+  //3)This function will check our archive directory and see if the 
+  //  file that was asked is in there. If it is, return tree and pass it to 
+  // callback, else return false and pass it to callback
 
 };
 
