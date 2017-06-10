@@ -85,6 +85,8 @@ exports.addUrlToList = function(url, callback) {
   //  if outcome is true then do nothing, if false 
       // utilize fs.writeFileSync to add url and new line character
       //to the sites.txt
+  //6)Verified
+
 };
 
 exports.isUrlArchived = function(url, callback) {
