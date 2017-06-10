@@ -78,6 +78,8 @@ exports.isUrlInList = function(url, callback) {
 
 exports.addUrlToList = function(url, callback) {
   //1)Input url and callback; Output - none, side effect - potentially will change sites.txt file
+  //2)This fnc will add new url to sites.txt if it didn't find it there
+  
 };
 
 exports.isUrlArchived = function(url, callback) {
