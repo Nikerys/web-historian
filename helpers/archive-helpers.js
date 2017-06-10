@@ -90,15 +90,10 @@ exports.addUrlToList = function(url, callback) {
   this.isUrlInList(url, function(bool) {
     if (bool === false) {
       var newline = url.concat('\n');
-      console.log(newline);
-      fs.writeFileSync(this.paths.list, 'newline');
+      console.log('1-NEWLINE');
+      fs.appendFile(exports.paths.list, newline, () => { callback(); console.log('THIS SHOULD WORK'); });
     }
   });
-  this.readListOfUrls(function(urls) {
-    console.log('HELLO', urls);
-    console.log('TEXT', urls.join('\n'));
-  });////
-  callback();
 };
 
 exports.isUrlArchived = function(url, callback) {

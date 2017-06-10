@@ -114,10 +114,6 @@ describe('archive helpers', function() {
       fs.writeFileSync(archive.paths.list, urlArray.join('\n'));
       archive.addUrlToList('someurl.com', function () {
         archive.isUrlInList('someurl.com', function (exists) {
-          console.log(exists);///
-          archive.readListOfUrls(function(urls) {
-            console.log(urls);
-          });////
           expect(exists).to.be.true;
           done();
         });
