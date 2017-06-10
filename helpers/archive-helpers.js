@@ -62,9 +62,12 @@ exports.isUrlInList = function(url, callback) {
   //   It will then run callback on that result
   //4) Diagram
   //5) create a variable result and assign it to the fnc readListOfUrls
-  //     callback of readListOfUrls will accept array and return boolean 
+  //     callback of readListOfUrls will accept array and use outter callback on result-boolean 
   //      true if url inside the array and false if not
-  //   pass this result variable which is boolean into out callback
+  //6)Verified
+  
+
+
 };
 
 exports.addUrlToList = function(url, callback) {
