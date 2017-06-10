@@ -66,11 +66,18 @@ exports.isUrlInList = function(url, callback) {
   //      true if url inside the array and false if not
   //6)Verified
   
-
-
+  this.readListOfUrls(function(array) {
+    for (let i = 0; i < array.length; i++) {
+      if (url === array[i]) {
+        callback(true);      
+      }
+    }
+    callback(false);
+  });
 };
 
 exports.addUrlToList = function(url, callback) {
+  //1)Input url and callback; Output - none, side effect - potentially will change sites.txt file
 };
 
 exports.isUrlArchived = function(url, callback) {
@@ -78,3 +85,23 @@ exports.isUrlArchived = function(url, callback) {
 
 exports.downloadUrls = function(urls) {
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
