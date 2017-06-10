@@ -55,7 +55,9 @@ exports.readListOfUrls = function(callback) {
 exports.isUrlInList = function(url, callback) {
   //1) Input 1 Url, 1 Callback; Output result of a callback
         //No side effects
-  
+  //2) This function will accept url and callback, read list of all urls
+  //   check if url in this list and run callback on that result
+  //
 };
 
 exports.addUrlToList = function(url, callback) {
