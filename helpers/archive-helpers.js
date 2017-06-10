@@ -31,7 +31,7 @@ exports.readListOfUrls = function(callback) {
   //3)This function will read the text file and output array of strings 
   //  Where every item of array is a line in the text file, and every line
   //  consist of one URL
-  //
+  //4)Diagram
 };
 
 exports.isUrlInList = function(url, callback) {
