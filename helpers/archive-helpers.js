@@ -111,6 +111,7 @@ exports.isUrlArchived = function(url, callback) {
   //  In the callback if err, console log Error
   //  If not loop through array and check if url is in there
   //  depending on the result supply boolean to the callback.
+  //6)Verified
 
 };
 
