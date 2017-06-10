@@ -65,14 +65,14 @@ exports.isUrlInList = function(url, callback) {
   //     callback of readListOfUrls will accept array and use outter callback on result-boolean 
   //      true if url inside the array and false if not
   //6)Verified
-  
+  var flag = false;
   this.readListOfUrls(function(array) {
     for (let i = 0; i < array.length; i++) {
       if (url === array[i]) {
-        callback(true);      
+        flag = true;      
       }
     }
-    callback(false);
+    callback(flag);
   });
 };
 
@@ -87,6 +87,18 @@ exports.addUrlToList = function(url, callback) {
       //to the sites.txt
   //6)Verified
 
+  this.isUrlInList(url, function(bool) {
+    if (bool === false) {
+      var newline = url.concat('\n');
+      console.log(newline);
+      fs.writeFileSync(this.paths.list, 'newline');
+    }
+  });
+  this.readListOfUrls(function(urls) {
+    console.log('HELLO', urls);
+    console.log('TEXT', urls.join('\n'));
+  });////
+  callback();
 };
 
 exports.isUrlArchived = function(url, callback) {
