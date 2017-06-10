@@ -104,6 +104,7 @@ exports.isUrlArchived = function(url, callback) {
   //3)This function will check our archive directory and see if the 
   //  file that was asked is in there. If it is, return tree and pass it to 
   // callback, else return false and pass it to callback
+  //4)
 
 };
 
