@@ -40,6 +40,8 @@ exports.readListOfUrls = function(done) {
   //    Otherwise, let user know that file was successfuly read
   //    return an array that contains the content split by '\n' newline
   //    run done on error and array
+  //6)Verified on the board
+
 };
 
 exports.isUrlInList = function(url, callback) {
