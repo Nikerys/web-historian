@@ -81,6 +81,10 @@ exports.addUrlToList = function(url, callback) {
   //2)This fnc will add new url to sites.txt if it didn't find it there
   //3)If sites.txt doesn't have url in it, this fnc will add url on the new line
   //4)Diagram 
+  //5)run isUrlInList fnc; pass url and in the callback depending of the outcome:
+  //  if outcome is true then do nothing, if false 
+      // utilize fs.writeFileSync to add url and new line character
+      //to the sites.txt
 };
 
 exports.isUrlArchived = function(url, callback) {
