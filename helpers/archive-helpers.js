@@ -104,7 +104,13 @@ exports.isUrlArchived = function(url, callback) {
   //3)This function will check our archive directory and see if the 
   //  file that was asked is in there. If it is, return tree and pass it to 
   // callback, else return false and pass it to callback
-  //4)
+  //4)Diagram
+  //5)Use fs command readdir that accepts path, and callback with 2 args 
+  //  error and files, which will be an array of strings where strings are names
+  //  of a url files inside the directory.
+  //  In the callback if err, console log Error
+  //  If not loop through array and check if url is in there
+  //  depending on the result supply boolean to the callback.
 
 };
 
