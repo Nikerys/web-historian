@@ -90,8 +90,7 @@ exports.addUrlToList = function(url, callback) {
   this.isUrlInList(url, function(bool) {
     if (bool === false) {
       var newline = url.concat('\n');
-      console.log('1-NEWLINE');
-      fs.appendFile(exports.paths.list, newline, () => { callback(); console.log('THIS SHOULD WORK'); });
+      fs.appendFile(exports.paths.list, newline, () => { callback(); });
     }
   });
 };
@@ -112,7 +111,9 @@ exports.isUrlArchived = function(url, callback) {
   //  If not loop through array and check if url is in there
   //  depending on the result supply boolean to the callback.
   //6)Verified
-
+  fs.readdir(exports.paths.archivedSites, (err, files) => {
+    callback(files.includes(url));
+  });
 };
 
 exports.downloadUrls = function(urls) {
